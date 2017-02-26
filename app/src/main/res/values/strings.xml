@@ -1,95 +1,95 @@
 <resources>
     <string name="app_name">Here To Stay</string>
-    <string name="title_activity_scrolling1">ScrollingActivity1</string>
+    <string name="title_activity_scrolling1">Your Rights and What to Do:</string>
     <string name="large_text1">
-        "Material is the metaphor.\n\n"
-
-        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
-        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
-        "technologically advanced and open to imagination and magic.\n"
-        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
-        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
-        "flexibility of the material creates new affordances that supercede those in the physical "
-        "world, without breaking the rules of physics.\n"
-        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
-        "interact, and exist in space and in relation to each other. Realistic lighting shows "
-        "seams, divides space, and indicates moving parts.\n\n"
-
-        "Bold, graphic, intentional.\n\n"
-
-        "The foundational elements of print based design typography, grids, space, scale, color, "
-        "and use of imagery guide visual treatments. These elements do far more than please the "
-        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
-        "imagery, large scale typography, and intentional white space create a bold and graphic "
-        "interface that immerse the user in the experience.\n"
-        "An emphasis on user actions makes core functionality immediately apparent and provides "
-        "waypoints for the user.\n\n"
-
-        "Motion provides meaning.\n\n"
-
-        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
-        "inflection points that initiate motion, transforming the whole design.\n"
-        "All action takes place in a single environment. Objects are presented to the user without "
-        "breaking the continuity of experience even as they transform and reorganize.\n"
-        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
-        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
-
-        "3D world.\n\n"
-
-        "The material environment is a 3D space, which means all objects have x, y, and z "
-        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
-        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
-        "position along the z-axis and has a standard 1dp thickness.\n"
-        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
-        "emulated by manipulating the y-axis.\n\n"
-
-        "Light and shadow.\n\n"
-
-        "Within the material environment, virtual lights illuminate the scene. Key lights create "
-        "directional shadows, while ambient light creates soft shadows from all angles.\n"
-        "Shadows in the material environment are cast by these two light sources. In Android "
-        "development, shadows occur when light sources are blocked by sheets of material at "
-        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
-        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
-
-        "Resting elevation.\n\n"
-
-        "All material objects, regardless of size, have a resting elevation, or default elevation "
-        "that does not change. If an object changes elevation, it should return to its resting "
-        "elevation as soon as possible.\n\n"
-
-        "Component elevations.\n\n"
-
-        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
-        "does not vary from 6dp in one app to 16dp in another app).\n"
-        "Components may have different resting elevations across platforms, depending on the depth "
-        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
-
-        "Responsive elevation and dynamic elevation offsets.\n\n"
-
-        "Some component types have responsive elevation, meaning they change elevation in response "
-        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
-        "changes are consistently implemented using dynamic elevation offsets.\n"
-        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
-        "to the component’s resting state. They ensure that elevation changes are consistent "
-        "across actions and component types. For example, all components that lift on press have "
-        "the same elevation change relative to their resting elevation.\n"
-        "Once the input event is completed or cancelled, the component will return to its resting "
-        "elevation.\n\n"
-
-        "Avoiding elevation interference.\n\n"
-
-        "Components with responsive elevations may encounter other components as they move between "
-        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
-        "through other material, components avoid interfering with one another any number of ways, "
-        "whether on a per component basis or using the entire app layout.\n"
-        "On a component level, components can move or be removed before they cause interference. "
-        "For example, a floating action button (FAB) can disappear or move off screen before a "
-        "user picks up a card, or it can move if a snackbar appears.\n"
-        "On the layout level, design your app layout to minimize opportunities for interference. "
-        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
-        "when a user tries to pick up one of cards.\n\n"
+        "If you are stopped for questioning:
+Stay calm. Don't run. Don't argue, resist or obstruct the police, even if you are innocent or police are violating your rights. Keep your hands where police can see them.
+Ask if you are free to leave. If the officer says yes, calmly and silently walk away. If you are under arrest, you have a right to know why.
+You have the right to remain silent and cannot be punished for refusing to answer questions. If you wish to remain silent, tell the officer out loud. In some states, you must give your name if asked to identify yourself.
+You do not have to consent to a search of yourself or your belongings, but police may "pat down" your clothing if they suspect a weapon. You should not physically resist, but you have the right to refuse consent for any further search. If you do consent, it can affect you later in court.
+If you are stopped in your car:
+Stop the car in a safe place as quickly as possible. Turn off the car, turn on the internal light, open the window part way and place your hands on the wheel.
+Upon request, show police your driver's license, registration and proof of insurance.
+If an officer or immigration agent asks to look inside your car, you can refuse to consent to the search. But if police believe your car contains evidence of a crime, your car can be searched without your consent.
+Both drivers and passengers have the right to remain silent. If you are a passenger, you can ask if you are free to leave. If the officer says yes, sit silently or calmly leave. Even if the officer says no, you have the right to remain silent.
+If you are questioned about your immigration status:
+You have the right to remain silent and do not have to discuss your immigration or citizenship status with police, immigration agents or any other officials. You do not have to answer questions about where you were born, whether you are a U.S. citizen, or how you entered the country. (Separate rules apply at international borders and airports, and for individuals on certain nonimmigrant visas, including tourists and business travelers.)
+If you are not a U.S. citizen and an immigration agent requests your immigration papers, you must show them if you have them with you. If you are over 18, carry your immigration documents with you at all times. If you do not have immigration papers, say you want to remain silent.
+Do not lie about your citizenship status or provide fake documents.
+If the police or immigration agents come to your home:
+If the police or immigration agents come to your home, you do not have to let them in unless they have certain kinds of warrants.
+Ask the officer to slip the warrant under the door or hold it up to the window so you can inspect it. A search warrant allows police to enter the address listed on the warrant, but officers can only search the areas and for the items listed. An arrest warrant allows police to enter the home of the person listed on the warrant if they believe the person is inside. A warrant of removal/deportation (ICE warrant) does not allow officers to enter a home without consent.
+Even if officers have a warrant, you have the right to remain silent. If you choose to speak to the officers, step outside and close the door."
     </string>
-    <string name="large_text2">testyoloswolo</string>
+    <string name="large_text2">
+        "Do not resist arrest, even if you believe the arrest is unfair.
+Say you wish to remain silent and ask for a lawyer immediately. Don't give any explanations or excuses. If you can't pay for a lawyer, you have the right to a free one. Don't say anything, sign anything or make any decisions without a lawyer.
+You have the right to make a local phone call. The police cannot listen if you call a lawyer.
+Prepare yourself and your family in case you are arrested. Memorize the phone numbers of your family and your lawyer. Make emergency plans if you have children or take medication.
+Special considerations for non-citizens:
+Ask your lawyer about the effect of a criminal conviction or plea on your immigration status.
+Don't discuss your immigration status with anyone but your lawyer.
+While you are in jail, an immigration agent may visit you. Do not answer questions or sign anything before talking to a lawyer.
+Read all papers fully. If you do not understand or cannot read the papers, tell the officer you need an interpreter.
+If you are taken into immigration (or “ICE”) custody:
+You have the right to a lawyer, but the government does not have to provide one for you. If you do not have a lawyer, ask for a list of free or low-cost legal services.
+You have the right to contact your consulate or have an officer inform the consulate of your arrest.
+Tell the ICE agent you wish to remain silent. Do not discuss your immigration status with anyone but your lawyer.
+Do not sign anything, such as a voluntary departure or stipulated removal, without talking to a lawyer. If you sign, you may be giving up your opportunity to try to stay in the U.S.
+Remember your immigration number ("A" number) and give it to your family. It will help family members locate you.
+Keep a copy of your immigration documents with someone you trust.
+If you feel your rights have been violated:
+Remember: police misconduct cannot be challenged on the street. Don’t physically resist officers or threaten to file a complaint.
+Write down everything you remember, including officers’ badge and patrol car numbers, which agency the officers were from, and any other details. Get contact information for witnesses. If you are injured, take photographs of your injuries (but seek medical attention first).
+File a written complaint with the agency's internal affairs division or civilian complaint board. In most cases, you can file a complaint anonymously if you wish.
+Call your local ACLU or visit www.aclu.org/profiling."
+    </string>
+    <string name="large_text3">"Freedom of Expression and Assembly:
+Everyone has the right to carry their opinion to the streets
+Protection of the Right to Freedom of Assembly:
+Law enforcement must facilitate and not restrict a peaceful public assembly
+Freedom from excessive use of force:
+In the policing of non-violent protests, police must avoid the use of force
+Right to Medical Assistance:
+If you are injured, you have a right to medical assistance without delay
+Freedom from arbitrary arrest and detention:
+If you are arrested you have a right to be told the reason for your arrest, you also have the right promptly after your arrest to have access to a lawyer and to your family
+Right to complain:
+If your rights have been violated, you have a right to file a complaint and to be provided information on how to do so
+Right to record incidents via photos, videos, audio recordings:
+Taking photographs and videos of things that are plainly visible from public spaces is your constitutional right. That includes federal buildings, transportation facilities, and police and other government officials carrying out their duties. Unfortunately, law enforcement officers often order people to stop taking photographs or video in public places, and sometimes harass, detain or even arrest people who use their cameras or cell phone recording devices in public.
+When you are on private property, the property owner sets the rules about the taking of photographs or videos. If you disobey property owners' rules, they can order you off their property (and have you arrested for trespassing if you do not comply).
+Police should not order you to stop taking pictures or video. Under no circumstances should they demand that you delete your photographs or video.
+Police officers may order citizens to cease activities that are truly interfering with legitimate law enforcement operations. In general, a court will trust an officer's judgment about what is "interfering" more than yours. So if an officer orders you to stand back, do so.
+If the officer says he/she will arrest you if you continue to use your camera, in most circumstances it is better to put the camera away and call the ACLU for help, rather than risking arrest.
+Police officers may not generally confiscate or demand to view your photographs or video or search the contents your cell phone without a warrant. In addition, it is possible that courts may approve the seizure of a camera in some circumstances if police have a reasonable, good-faith belief that it contains evidence of a crime by someone other than the police themselves (it is unsettled whether they still need a warrant to view them). (Note: This section has been updated to reflect the June 2014 US Supreme Court decision in Riley v. California, in which the court held that police need a warrant to search a cellphone.)
+"
+    </string>
+    <string name="large_text4">"Rights at airports and other ports of entry into the US
+If asked to remove your hijab, you should assert your right to wear it before going through airport security screening. If an alarm goes off, however, airport security officers may request additional screening. They may then conduct a pat-down of your hijab or ask you to remove it. You have the right to request that the pat-down or removal be conducted by a person of your gender and that it occur in a private area.
+If you do not want the TSA officer to touch your hijab, you must refuse and say that you would prefer to pat it down yourself. You will then be taken aside and a TSA officer will supervise you as you pat down your hijab. After the pat-down, the TSA officer may rub your hands with a small cotton cloth and place it in a machine to test for chemical residue. If you pass this chemical residue test, you should be allowed to proceed to your flight. If the TSA officer insists on the removal of your hijab, you have a right to ask that it be done in a private area.
+Officers may not conduct additional screening based solely on your race, national origin, religion, gender, ethnicity, or political beliefs.
+Be free from discriminatory questioning at the airport or border. Customs and Border Protection (CBP) officers have the authority to ask your immigration status when you are entering or returning to the United States or leaving the country. They have the power to determine whether non-U.S. citizens and lawful permanent residents have the right to enter the country. If you are a U.S. citizen and you have presented a valid passport, you do not have to answer officers’ questions, although refusing to answer routine questions about the nature and purpose of your travel could result in delay and/or further inspection. If you are a lawful permanent resident, we recommend you answer officers’ questions. If you are a non-citizen visa holder, you may be denied entry into the United States if you refuse to answer officers’ questions. Officers, however, may not select you for questioning based on your religion, race, national origin, gender, ethnicity, or political beliefs.
+If you are a U.S. citizen and the officers’ questions become intrusive, you have the right to talk to a lawyer before answering any questions. You should be aware that refusing to cooperate with officers may result in delay and/or further inspection. If you are a lawful permanent resident, your right to talk to a lawyer depends on the circumstances. If the officers’ questions become intrusive, you may ask to speak to a lawyer but, in some situations, officers have the authority to refuse to allow you to speak to a lawyer before you answer their questions. If you are a non-citizen visa holder selected for further questioning, you may ask to talk to a lawyer but you generally do not have the right to do consult a lawyer before answering the officers’ questions. Importantly, for anyone attempting to enter the United States, if a customs officer or border agent informs you that you are under arrest, or if it becomes clear that he or she suspects you have committed a crime, you have the right to talk to a lawyer before answering any questions.
+Be free from discriminatory stops and searches at the airport or border. Generally, CBP officers may stop, detain, and search any person or item at the border, including laptops or cell phones. This is true even if there is nothing suspicious about you or your luggage. Officers, however, may not select you for a personal search or secondary inspection based on your religion, race, national origin, gender, ethnicity, or political beliefs.
+Officers have sometimes asked travelers to provide their laptop passwords or unlock their mobile phones. Whether you have a right to decline to provide this information is a contested legal issue. The extent to which officers have the authority to search or copy files in your electronic devices without any reasonable suspicion that the devices contain evidence of wrongdoing is also a contested issue. U.S. citizens cannot be denied entry to the United States for refusing to provide passwords or unlock devices, but refusal to do so might lead to delay, lengthy questioning, and/or officers seizing your device for further inspection. For lawful permanent residents and non-citizen visa holders, refusing to cooperate might also lead to officers denying your entry into the country.
+If an officer searches and/or confiscates your laptop or cell phone, write down his or her name and get a receipt for your property.
+Be free from discriminatory questioning or removal by airline employees. An airline pilot may refuse to fly a passenger if he or she reasonably believes, based on observation, that the passenger is a threat to flight safety. A pilot may not, however, question you or refuse to allow you on a flight because of biased stereotypes, including any based on your religion, race, national origin, gender, ethnicity, or political beliefs.
+Return to the United States after traveling abroad if you are a U.S. citizen or a lawful permanent resident. If you are a U.S. citizen or green-card holder denied boarding in a foreign country due to apparent inclusion on the No Fly List or other watchlist, the U.S. government must help you secure approval to return to the United States on a commercial flight.
+"</string>
+    <string name="large_text5">"Green Card Holders:
+Resist any demands to give up your green card. Do NOT sign Form I-407, even if they say it will make things easier
+Demand a hearing from a judge:
+You have the right to a hearing with an immigration judge. Do NOT relinquish this right
+Demand to speak to an attorney:
+You have the right to be represented by an attorney. Ask to speak to an attorney, and discuss details of your case with only your attorney, not CBP (Customs and Border Protection)
+"</string>
+    <string name="large_text6">"Federal Law:
+Title IX states that “No person shall be excluded from participation in, be denied the benefits of, or be subjected to discrimination under any education program or activity receiving Federal financial assistance based on....gender identity or failure to conform to stereotypical gender expression.”
+FERPA states that a current or former student has the right to request that the school change their name and gender marker on school records (minors will need parental consent)
+NJ law:
+The New Jersey Law Against Discrimination (N.J.S.A. 10:5-12) (LAD) makes it unlawful to subject people to differential treatment based on race, creed, color, national origin, nationality, ancestry, age, sex (including pregnancy), familial status, marital status, domestic partnership or civil union status, affectional or sexual orientation, gender identity or expression, atypical hereditary cellular or blood trait, genetic information, liability for military service, and mental or physical disability, perceived disability, and AIDS and HIV status. The LAD prohibits unlawful discrimination in employment, housing, places of public accommodation, credit and business contracts. Not all of the foregoing prohibited bases for discrimination are protected in all of these areas of activity.
+NJ Anti-Bullying Bill of Rights highlights themes of bullying so gender expression and gender identity are included.
+"</string>
     <string name="action_settings">Settings</string>
 </resources>

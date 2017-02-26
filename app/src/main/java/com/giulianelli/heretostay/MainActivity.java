@@ -26,13 +26,21 @@ public class MainActivity extends AppCompatActivity {
         mainList = (ListView) findViewById(R.id.mainList);
 
         //create Situations
-        Situation one = new Situation("one");
-        Situation two = new Situation("two");
+        Situation one = new Situation("Police Stops");
+        Situation two = new Situation("Arrests");
+        Situation three = new Situation("Protests and Demonstrations");
+        Situation four = new Situation("Anti-Muslim Discrimination");
+        Situation five = new Situation("Refugee Rights");
+        Situation six = new Situation("LGBTQ+ Discrimination");
 
         //instantiate array list for different situations
         ArrayList<Situation> situations = new ArrayList<>();
         situations.add(one);
         situations.add(two);
+        situations.add(three);
+        situations.add(four);
+        situations.add(five);
+        situations.add(six);
 
         //array adapter
         ArrayAdapter<Situation> arrayAdapter = new ArrayAdapter<>(

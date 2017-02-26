@@ -24,16 +24,40 @@ public class ScrollingActivity1 extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
 
         //display information on the first situation
-        if ((getIntent().getStringExtra(TEXT_KEY)).equals("one")){
+        if ((getIntent().getStringExtra(TEXT_KEY)).equals("Police Stops")){
             TextView textView = (TextView) findViewById(R.id.large_text);
             String description = textView.getText().toString();
             textView.setText(getResources().getString(R.string.large_text1));
         }
 
         //display information on the second situation
-        if ((getIntent().getStringExtra(TEXT_KEY)).equals("two")){
+        if ((getIntent().getStringExtra(TEXT_KEY)).equals("Arrests")){
             TextView textView = (TextView) findViewById(R.id.large_text);
             textView.setText(getResources().getString(R.string.large_text2));
+        }
+
+        //display information on the second situation
+        if ((getIntent().getStringExtra(TEXT_KEY)).equals("Protests and Demonstrations")){
+            TextView textView = (TextView) findViewById(R.id.large_text);
+            textView.setText(getResources().getString(R.string.large_text3));
+        }
+
+        //display information on the second situation
+        if ((getIntent().getStringExtra(TEXT_KEY)).equals("Anti-Muslim Discrimination")){
+            TextView textView = (TextView) findViewById(R.id.large_text);
+            textView.setText(getResources().getString(R.string.large_text4));
+        }
+
+        //display information on the second situation
+        if ((getIntent().getStringExtra(TEXT_KEY)).equals("Refugee Rights")){
+            TextView textView = (TextView) findViewById(R.id.large_text);
+            textView.setText(getResources().getString(R.string.large_text5));
+        }
+
+        //display information on the second situation
+        if ((getIntent().getStringExtra(TEXT_KEY)).equals("LGBTQ+ Discrimination")){
+            TextView textView = (TextView) findViewById(R.id.large_text);
+            textView.setText(getResources().getString(R.string.large_text6));
         }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
