@@ -1,22 +1,28 @@
 package com.giulianelli.heretostay;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.widget.Toast;
-
-
 import java.util.ArrayList;
+import android.app.Activity;
+import android.content.Context;
 
 import static com.giulianelli.heretostay.ScrollingActivity1.TEXT_KEY;
 
 public class MainActivity extends AppCompatActivity {
 
     private ListView mainList;
+
+    //final PackageManager pm = context.getPackageManager();
+    //final
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +65,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // get current context and use it to check if the device has a camera
+        Context context = this;
+        boolean deviceHasCameraFlag = MyUtilities.checkForCamera(context);
+
+        //Display camera FAB if the device has a camera
+        if (deviceHasCameraFlag){
+            FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            });
+        }
 
     }
 }
