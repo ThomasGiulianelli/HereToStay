@@ -15,8 +15,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/mainList"
-        />
+        android:id="@+id/mainList" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -29,4 +28,10 @@
         android:layout_margin="10dp"
         app:fabSize="normal"
         app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </RelativeLayout>
