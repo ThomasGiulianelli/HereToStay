@@ -9,10 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.support.design.widget.FloatingActionButton;
 import java.util.ArrayList;
 import android.content.Context;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import static com.giulianelli.heretostay.ScrollingActivity1.TEXT_KEY;
@@ -22,18 +24,40 @@ public class MainActivity extends AppCompatActivity {
     private ListView mainList;
     private VideoView mVideoView;
     private FloatingActionButton fab;
+    private Button exitButton;
 
     static final int REQUEST_VIDEO_CAPTURE = 1;
+
+    // Current playback position (in milliseconds)
+    private int mCurrentPosition = 0;
+
+    // Tag for the instance state bundle.
+    private static final String PLAYBACK_TIME = "play_time";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mainList = (ListView) findViewById(R.id.mainList);
+        mainList = findViewById(R.id.mainList);
+        fab = findViewById(R.id.floatingActionButton);
         mVideoView = findViewById(R.id.videoview);
+        exitButton = findViewById(R.id.exitButton);
 
         mVideoView.setVisibility(View.GONE); //hide video player
+        exitButton.setVisibility(View.GONE); //hide exit button
+
+        // Check for existence of instance state bundle
+        if (savedInstanceState != null) {
+            //Get the last known playback time of the video
+            mCurrentPosition = savedInstanceState.getInt(PLAYBACK_TIME);
+            System.out.println("###################################### current position: " + mCurrentPosition + "##################################");
+        }
+
+        MediaController controller = new MediaController(this);
+        controller.setMediaPlayer(mVideoView);
+        mVideoView.setMediaController(controller);
+
 
         // Create Situations
         Situation one = new Situation("Police Stops");
@@ -74,15 +98,35 @@ public class MainActivity extends AppCompatActivity {
         Context context = this;
         boolean deviceHasCameraFlag = MyUtilities.checkForCamera(context);
 
-        // Display camera FAB if the device has a camera
+        // Activate camera FAB and exit button functionality if the device has a camera
         if (deviceHasCameraFlag){
-            fab = findViewById(R.id.floatingActionButton);
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     dispatchTakeVideoIntent();
                 }
             });
+            exitButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    // Exit video playback
+                    releasePlayer();
+                    mVideoView.setVisibility(View.GONE);
+                    exitButton.setVisibility(View.GONE);
+                    mainList.setVisibility(View.VISIBLE);
+                    fab.show();
+                }
+            });
+        }
+        else fab.hide();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        // Load the media each time onStart() is called if the VideoView is still open
+        if (mVideoView.getVisibility() == View.VISIBLE) {
+            initializePlayer();
         }
     }
 
@@ -105,15 +149,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        // Save the current video playback position (in milliseconds) to the
+        // instance state bundle.
+        outState.putInt(PLAYBACK_TIME, mVideoView.getCurrentPosition());
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        // Setup video playback for the video the user just captured
         if (requestCode == REQUEST_VIDEO_CAPTURE && resultCode == RESULT_OK) {
-            System.out.println("got video!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             Uri videoUri = intent.getData();
             mVideoView.setVideoURI(videoUri);
             mainList.setVisibility(View.GONE); //hide the ListView so it is no longer interactive
             fab.hide(); //hide fab so it is no longer in the way
             mVideoView.setVisibility(View.VISIBLE); //display video player
-            mVideoView.start();
+            exitButton.setVisibility(View.VISIBLE); //display exit button
+
+            initializePlayer();
         }
     }
 
@@ -123,6 +178,18 @@ public class MainActivity extends AppCompatActivity {
         if (takeVideoIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takeVideoIntent, REQUEST_VIDEO_CAPTURE);
         }
+    }
+
+    // Begins video playback
+    private void initializePlayer() {
+        // Restore saved position, if available.
+        if (mCurrentPosition > 0) {
+            mVideoView.seekTo(mCurrentPosition);
+        } else {
+            // Shows the first frame of the video instead of blackscreen
+            mVideoView.seekTo(1);
+        }
+        mVideoView.start();
     }
 
     // Stops video playback
